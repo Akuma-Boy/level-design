@@ -5,24 +5,27 @@ public class Attack : MonoBehaviour
     [Header("Referências")]
     [SerializeField] private Animator animator;
     [SerializeField] private Camera playerCamera;
-    
+
     [Header("Configurações do Projétil")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 20f;
     [SerializeField] private float attackCooldown = 0.5f;
-    [SerializeField] private float projectileSpawnDistance = 1f;
-    [SerializeField] private float comboTimeout = 1f; // Tempo máximo entre ataques para combo
-    
+
+    [Tooltip("Offset de spawn do projétil em relação à câmera (X = lateral, Y = altura, Z = frente).")]
+    [SerializeField] private Vector3 projectileSpawnOffset = new Vector3(0f, 0f, 1f);
+
+    [SerializeField] private float comboWindow = 0.3f; // Janela de tempo para o combo
+
     private float nextAttackTime = 0f;
     private bool pistols = false;
+    private bool readyForCombo = false; // Controla se pode executar o segundo ataque
     private float lastPistolAttackTime;
-    private bool canDoSecondAttack = false;
 
     void Start()
     {
         if (animator == null)
             animator = GetComponent<Animator>();
-        
+
         if (playerCamera == null)
             playerCamera = Camera.main;
     }
@@ -42,21 +45,21 @@ public class Attack : MonoBehaviour
         {
             if (pistols)
             {
-                if (Time.time - lastPistolAttackTime > comboTimeout)
+                if (Time.time - lastPistolAttackTime <= comboWindow && readyForCombo)
                 {
-                    Debug.Log("[DEBUG] Trigger AttackPistols chamado!");
-                    animator.ResetTrigger("AttackPistols");
-                    animator.ResetTrigger("AttackPistols2"); // Reseta o segundo ataque também
-                    animator.SetTrigger("AttackPistols");
-                    canDoSecondAttack = true;
-                }
-                else if (canDoSecondAttack)
-                {
+                    // Segundo ataque do combo
                     Debug.Log("[DEBUG] Trigger AttackPistols2 chamado!");
                     animator.ResetTrigger("AttackPistols");
-                    animator.ResetTrigger("AttackPistols2");
                     animator.SetTrigger("AttackPistols2");
-                    canDoSecondAttack = false;
+                    readyForCombo = false;
+                }
+                else
+                {
+                    // Primeiro ataque
+                    Debug.Log("[DEBUG] Trigger AttackPistols chamado!");
+                    animator.ResetTrigger("AttackPistols2");
+                    animator.SetTrigger("AttackPistols");
+                    readyForCombo = true;
                 }
                 lastPistolAttackTime = Time.time;
             }
@@ -68,14 +71,13 @@ public class Attack : MonoBehaviour
             nextAttackTime = Time.time + attackCooldown;
         }
 
-        // Resetar combo se passar do tempo limite
-        if (canDoSecondAttack && Time.time - lastPistolAttackTime > comboTimeout)
+        // Reseta o combo se o tempo passar
+        if (Time.time - lastPistolAttackTime > comboWindow && readyForCombo)
         {
-            canDoSecondAttack = false;
-            Debug.Log("[DEBUG] Combo resetado (tempo esgotado)");
+            readyForCombo = false;
         }
     }
-    
+
     void Shoot()
     {
         if (projectilePrefab == null)
@@ -83,16 +85,18 @@ public class Attack : MonoBehaviour
             Debug.LogError("Prefab do projétil não atribuído!");
             return;
         }
-        
-        Vector3 spawnPosition = playerCamera.transform.position + 
-                              playerCamera.transform.forward * projectileSpawnDistance;
-        
+
+        Vector3 spawnPosition = playerCamera.transform.position +
+                                playerCamera.transform.forward * projectileSpawnOffset.z +
+                                playerCamera.transform.right * projectileSpawnOffset.x +
+                                playerCamera.transform.up * projectileSpawnOffset.y;
+
         GameObject projectile = Instantiate(
-            projectilePrefab, 
-            spawnPosition, 
+            projectilePrefab,
+            spawnPosition,
             playerCamera.transform.rotation
         );
-        
+
         Projectile projectileScript = projectile.GetComponent<Projectile>();
         if (projectileScript != null)
         {
@@ -108,7 +112,7 @@ public class Attack : MonoBehaviour
         }
     }
 
-    // Método opcional para debug (verifica se os parâmetros existem no Animator)
+    // Método opcional para debug
     void OnValidate()
     {
         if (animator != null)

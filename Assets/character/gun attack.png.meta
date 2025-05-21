@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,18 +102,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1172a02f6010a784697e059ab7d3f27f
-      internalID: 1555001102
+      spriteID: bae39e5a9dbf2f44681a3b348631b7c5
+      internalID: -1057033232
       vertices: []
       indices: 
       edges: []
@@ -122,20 +122,20 @@ TextureImporter:
       name: gun attack_1
       rect:
         serializedVersion: 2
-        x: 983
+        x: 738
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f788a47bda0e541905b1f93405d0f2
-      internalID: 645082681
+      spriteID: 10b7be35969d04b46bd2bddc4a7a19cd
+      internalID: 727901214
       vertices: []
       indices: 
       edges: []
@@ -144,20 +144,20 @@ TextureImporter:
       name: gun attack_2
       rect:
         serializedVersion: 2
-        x: 1966
+        x: 1476
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27fb128c08313c841a119e2e122b162e
-      internalID: -1070300506
+      spriteID: 3d6c805e791db6b41a5a61d76fdb6da4
+      internalID: 844235003
       vertices: []
       indices: 
       edges: []
@@ -166,20 +166,20 @@ TextureImporter:
       name: gun attack_3
       rect:
         serializedVersion: 2
-        x: 2949
+        x: 2214
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb98a63818091942b475f7e6d4b5a52
-      internalID: 235753362
+      spriteID: fe1f1d366e2a33d408df40c61102b282
+      internalID: -1153483492
       vertices: []
       indices: 
       edges: []
@@ -188,20 +188,20 @@ TextureImporter:
       name: gun attack_4
       rect:
         serializedVersion: 2
-        x: 3932
+        x: 2952
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd1d8b6b05180724a8cf15fbf7ad5b06
-      internalID: 1391653942
+      spriteID: 907f009af106739499c55add64922e00
+      internalID: -1165677063
       vertices: []
       indices: 
       edges: []
@@ -210,20 +210,20 @@ TextureImporter:
       name: gun attack_5
       rect:
         serializedVersion: 2
-        x: 4915
+        x: 3690
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42efd41e7c8bf63498a54cd96a69a900
-      internalID: 578308928
+      spriteID: 116cbf441a32d154b91f2909e9011875
+      internalID: -786986379
       vertices: []
       indices: 
       edges: []
@@ -232,20 +232,20 @@ TextureImporter:
       name: gun attack_6
       rect:
         serializedVersion: 2
-        x: 5898
+        x: 4428
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e16c3d8cc51d6cc4da9c5f44389d2a0e
-      internalID: 469814192
+      spriteID: 9e4c8f1c348254540ba1160c9204a047
+      internalID: -305151233
       vertices: []
       indices: 
       edges: []
@@ -254,20 +254,20 @@ TextureImporter:
       name: gun attack_7
       rect:
         serializedVersion: 2
-        x: 6881
+        x: 5166
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96b22c112b84f0f42808ce779c87ed99
-      internalID: -228289364
+      spriteID: 7fc1e072b1c8d4c49989ba5e45f51d53
+      internalID: -1101488287
       vertices: []
       indices: 
       edges: []
@@ -276,20 +276,20 @@ TextureImporter:
       name: gun attack_8
       rect:
         serializedVersion: 2
-        x: 7864
+        x: 5900
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc822bca1d2f68a43be911f4e187f7a5
-      internalID: 803356891
+      spriteID: 2e4299c4d3adc4142b2e6e8160b12e81
+      internalID: 1857016083
       vertices: []
       indices: 
       edges: []
@@ -298,20 +298,20 @@ TextureImporter:
       name: gun attack_9
       rect:
         serializedVersion: 2
-        x: 8847
+        x: 6633
         y: 0
-        width: 983
-        height: 512
+        width: 738
+        height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a053e59d78021d43bffebbeefd93573
-      internalID: 1988311993
+      spriteID: e136eec2bfb554f4a8f3f72cc927feb3
+      internalID: 575355435
       vertices: []
       indices: 
       edges: []
@@ -320,7 +320,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4fecb8bc21d226745b6eadf7a37c7134
     internalID: 0
     vertices: []
     indices: 
@@ -330,16 +330,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gun attack_0: 1555001102
-      gun attack_1: 645082681
-      gun attack_2: -1070300506
-      gun attack_3: 235753362
-      gun attack_4: 1391653942
-      gun attack_5: 578308928
-      gun attack_6: 469814192
-      gun attack_7: -228289364
-      gun attack_8: 803356891
-      gun attack_9: 1988311993
+      gun attack_0: -1057033232
+      gun attack_1: 727901214
+      gun attack_2: 844235003
+      gun attack_3: -1153483492
+      gun attack_4: -1165677063
+      gun attack_5: -786986379
+      gun attack_6: -305151233
+      gun attack_7: -1101488287
+      gun attack_8: 1857016083
+      gun attack_9: 575355435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
