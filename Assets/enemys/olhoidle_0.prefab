@@ -52,11 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2576073445967537643, guid: 2fc87060029b53e47b6c4980f60ed6c7, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 1088223485219720728}
   projectileSpeed: 10
   fireRate: 1
   detectionRange: 10
   player: {fileID: 0}
+  enemyAnimator: {fileID: 0}
 --- !u!114 &9076029220417852601
 MonoBehaviour:
   m_ObjectHideFlags: 0

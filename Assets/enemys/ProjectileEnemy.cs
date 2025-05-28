@@ -10,31 +10,31 @@ public class ProjectileEnemy : MonoBehaviour
     public float detectionRange = 10f;
 
     [Header("Referências")]
-    public Transform player;
     public Animator enemyAnimator;
 
+    private Transform player;
     private float nextFireTime = 0f;
     private static readonly int Attack = Animator.StringToHash("attack");
 
     void Start()
     {
-        FindPlayer();
+        TryAssignPlayer();
 
         if (enemyAnimator == null)
-        {
             enemyAnimator = GetComponent<Animator>();
-        }
     }
 
     void Update()
     {
+        // Se perdeu referência ao jogador, tenta achar de novo
         if (player == null)
         {
-            FindPlayer();
-            if (player == null) return;
+            TryAssignPlayer();
+            return;
         }
 
-        if (Vector3.Distance(transform.position, player.position) <= detectionRange)
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        if (distanceToPlayer <= detectionRange)
         {
             AimAtPlayer();
 
@@ -46,14 +46,19 @@ public class ProjectileEnemy : MonoBehaviour
         }
     }
 
-    void FindPlayer()
+    void TryAssignPlayer()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) player = playerObj.transform;
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+        }
     }
 
     void AimAtPlayer()
     {
+        if (player == null) return;
+
         Vector3 direction = (player.position - transform.position).normalized;
         if (direction != Vector3.zero)
         {
@@ -72,32 +77,22 @@ public class ProjectileEnemy : MonoBehaviour
 
         // Dispara a animação de ataque
         if (enemyAnimator != null)
-        {
             enemyAnimator.SetTrigger(Attack);
-        }
 
-        // Instancia o projétil
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
-        if (rb != null)
+        if (rb != null && player != null)
         {
             Vector3 direction = (player.position - firePoint.position).normalized;
-
-            // CORREÇÃO: Usando linearVelocity em vez de velocity
             rb.linearVelocity = direction * projectileSpeed;
 
-            // Ignora colisão inicial com o inimigo
             Collider projectileCollider = projectile.GetComponent<Collider>();
             Collider enemyCollider = GetComponent<Collider>();
             if (projectileCollider != null && enemyCollider != null)
             {
                 Physics.IgnoreCollision(projectileCollider, enemyCollider, true);
             }
-        }
-        else
-        {
-            Debug.LogWarning("Projétil não tem componente Rigidbody!", projectile);
         }
     }
 
