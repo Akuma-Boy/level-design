@@ -80,4 +80,18 @@ public class ManaSystem : MonoBehaviour
 
     public void SetDefaultManaCost(int cost) => defaultManaCost = cost;
     public void SetRegenRate(float rate) => manaRegenRate = rate;
+
+    // Método para recuperar mana
+    public void RestoreMana(int amount)
+    {
+        currentMana = Mathf.Min(maxMana, currentMana + amount);
+        OnManaChanged.Invoke();
+        UpdateManaBar();
+    }
+
+
+
+
+
+
 }

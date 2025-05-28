@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\manapickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\manapickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\movimentoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\movimentoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\movimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\movimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|c:\\users\\matutino\\documents\\github\\level-design\\assets\\enemys\\prefabspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\prefabspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|c:\\users\\matutino\\documents\\github\\level-design\\assets\\enemys\\projectileenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\projectileenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\rotateonject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\rotateonject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\manasystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\manasystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\enemys\\projectileenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\projectileenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\healthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\fixcanvapivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\movimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\movimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5E32B522-1184-469E-95B1-CAFD9A3DD9AC}|Itens de Solu\u00E7\u00E3o{5E32B522-1184-469E-95B1-CAFD9A3DD9AC}|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{5E32B522-1184-469E-95B1-CAFD9A3DD9AC}|Itens de Solu\u00E7\u00E3o{5E32B522-1184-469E-95B1-CAFD9A3DD9AC}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -46,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +66,57 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RotateOnject.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\RotateOnject.cs",
+              "RelativeDocumentMoniker": "Assets\\character\\RotateOnject.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\RotateOnject.cs",
+              "RelativeToolTip": "Assets\\character\\RotateOnject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T13:52:13.1Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ManaPickup.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\ManaPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\character\\ManaPickup.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\ManaPickup.cs",
+              "RelativeToolTip": "Assets\\character\\ManaPickup.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAwwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T13:34:55.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-21T12:59:31.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "movimentoplayer.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\movimentoplayer.cs",
+              "RelativeDocumentMoniker": "Assets\\character\\movimentoplayer.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\movimentoplayer.cs",
+              "RelativeToolTip": "Assets\\character\\movimentoplayer.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA9wDYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T13:40:56.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PrefabSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\PrefabSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\enemys\\PrefabSpawner.cs",
@@ -67,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ProjectileEnemy.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\ProjectileEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\enemys\\ProjectileEnemy.cs",
@@ -75,37 +137,23 @@
               "RelativeToolTip": "Assets\\enemys\\ProjectileEnemy.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T12:48:13.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T12:48:13.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-21T12:59:31.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ManaSystem.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\ManaSystem.cs",
               "RelativeDocumentMoniker": "Assets\\character\\ManaSystem.cs",
               "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\ManaSystem.cs",
               "RelativeToolTip": "Assets\\character\\ManaSystem.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAiwFIAAAABAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAQwGAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T11:49:03.448Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "HealthBar.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\HealthBar.cs",
               "RelativeDocumentMoniker": "Assets\\character\\HealthBar.cs",
@@ -117,19 +165,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Attack.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\Attack.cs",
               "RelativeDocumentMoniker": "Assets\\character\\Attack.cs",
               "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\Attack.cs",
               "RelativeToolTip": "Assets\\character\\Attack.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAADwv1QAAAAAAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAgwLcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T12:12:19.976Z"
+              "WhenOpened": "2025-05-21T12:12:19.976Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\character\\PlayerHealth.cs",
@@ -141,7 +190,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "movimento.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\movimento.cs",
+              "RelativeDocumentMoniker": "Assets\\character\\movimento.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\movimento.cs",
+              "RelativeToolTip": "Assets\\character\\movimento.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA5wCoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:08:03.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FixCanvaPivot.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\FixCanvaPivot.cs",
               "RelativeDocumentMoniker": "Assets\\character\\FixCanvaPivot.cs",
@@ -150,18 +212,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T10:57:59.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "movimento.cs",
-              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\movimento.cs",
-              "RelativeDocumentMoniker": "Assets\\character\\movimento.cs",
-              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\movimento.cs",
-              "RelativeToolTip": "Assets\\character\\movimento.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAmwCQAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T14:08:03.062Z"
             }
           ]
         }

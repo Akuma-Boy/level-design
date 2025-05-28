@@ -66,6 +66,7 @@
     <Compile Include="Assets\character\PlayerHealth.cs" />
     <Compile Include="Assets\character\Projectile.cs" />
     <Compile Include="Assets\character\FixCanvaPivot.cs" />
+    <Compile Include="Assets\character\RotateOnject.cs" />
     <Compile Include="Assets\character\HealthBar.cs" />
     <Compile Include="Assets\character\movimento.cs" />
     <Compile Include="Assets\character\Attack.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\enemys\EnemyMovement.cs" />
     <Compile Include="Assets\enemys\Lookatu.cs" />
     <Compile Include="Assets\enemys\enemyhp.cs" />
+    <Compile Include="Assets\character\ManaPickup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
