@@ -4,13 +4,13 @@ using UnityEngine.UI;
 
 public class ManaSystem : MonoBehaviour
 {
-    [Header("Configurações")]
+    [Header("ConfiguraÃ§Ãµes")]
     [SerializeField] private int maxMana = 100;
     [SerializeField] private int currentMana;
-    [SerializeField] private int defaultManaCost = 10; // Custo padrão de mana
+    [SerializeField] private int defaultManaCost = 10;
     [SerializeField] private float manaRegenRate = 5f;
 
-    [Header("Referências")]
+    [Header("ReferÃªncias")]
     [SerializeField] private Image manaBarFill;
     [SerializeField] private Text manaText;
 
@@ -18,13 +18,25 @@ public class ManaSystem : MonoBehaviour
     public UnityEvent OnManaChanged;
     public UnityEvent OnNotEnoughMana;
 
-    // Método único que pode verificar qualquer custo
+    private void Start()
+    {
+        currentMana = maxMana;
+        UpdateManaBar();
+    }
+
+    private void Update()
+    {
+        if (currentMana < maxMana)
+        {
+            RegenerateMana();
+        }
+    }
+
     public bool HasEnoughMana(int requiredMana)
     {
         return currentMana >= requiredMana;
     }
 
-    // Método para gastar mana com verificação
     public bool TrySpendMana(int amount)
     {
         if (HasEnoughMana(amount))
@@ -37,24 +49,9 @@ public class ManaSystem : MonoBehaviour
         return false;
     }
 
-    // Método específico para o custo padrão (opcional)
     public bool HasEnoughManaForDefaultCost()
     {
         return HasEnoughMana(defaultManaCost);
-    }
-
-    void Start()
-    {
-        currentMana = maxMana;
-        UpdateManaBar();
-    }
-
-    void Update()
-    {
-        if (currentMana < maxMana)
-        {
-            RegenerateMana();
-        }
     }
 
     private void RegenerateMana()
@@ -78,10 +75,6 @@ public class ManaSystem : MonoBehaviour
         }
     }
 
-    public void SetDefaultManaCost(int cost) => defaultManaCost = cost;
-    public void SetRegenRate(float rate) => manaRegenRate = rate;
-
-    // Método para recuperar mana
     public void RestoreMana(int amount)
     {
         currentMana = Mathf.Min(maxMana, currentMana + amount);
@@ -89,9 +82,6 @@ public class ManaSystem : MonoBehaviour
         UpdateManaBar();
     }
 
-
-
-
-
-
+    public void SetDefaultManaCost(int cost) => defaultManaCost = cost;
+    public void SetRegenRate(float rate) => manaRegenRate = rate;
 }

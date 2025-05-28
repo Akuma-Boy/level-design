@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7872989706379875677
+--- !u!1 &7518548502185783518
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5990049633771234016}
-  - component: {fileID: 4686908465195918763}
-  - component: {fileID: -3209976042772225887}
-  - component: {fileID: -7351180610024264983}
-  - component: {fileID: 883444047683308204}
-  - component: {fileID: -3849261778129064384}
+  - component: {fileID: 2561873434554604405}
+  - component: {fileID: 7504724648354786388}
+  - component: {fileID: 2152266898308610858}
+  - component: {fileID: 7377269782085562323}
+  - component: {fileID: 3153901768191495115}
+  - component: {fileID: 6454865357641753921}
+  - component: {fileID: 7438191411342312722}
   m_Layer: 0
-  m_Name: cigarro
+  m_Name: cigarro 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5990049633771234016
+--- !u!4 &2561873434554604405
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872989706379875677}
+  m_GameObject: {fileID: 7518548502185783518}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.6087605, z: -0, w: 0.79335415}
-  m_LocalPosition: {x: 2037, y: -62, z: 987}
+  m_LocalPosition: {x: 2037.5645, y: -61.602, z: 987.7375}
   m_LocalScale: {x: 0.32, y: 0.36, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
---- !u!212 &4686908465195918763
+--- !u!212 &7504724648354786388
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872989706379875677}
+  m_GameObject: {fileID: 7518548502185783518}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -91,29 +92,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3209976042772225887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872989706379875677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 121acef07514bcf46890eaa7e7b98bdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manaAmount: 25
-  pickupSound: {fileID: 0}
-  pickupEffect: {fileID: 0}
-  rotateSpeed: 90
---- !u!54 &-7351180610024264983
+--- !u!54 &2152266898308610858
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872989706379875677}
+  m_GameObject: {fileID: 7518548502185783518}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -134,13 +119,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &883444047683308204
-BoxCollider:
+--- !u!114 &7377269782085562323
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872989706379875677}
+  m_GameObject: {fileID: 7518548502185783518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69223031154089244ae0566f0fcafcc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaToRestore: 15
+  destroyOnHit: 1
+  manaEffect: {fileID: 0}
+--- !u!114 &3153901768191495115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518548502185783518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7ca2e9583e03344b97089549b0c980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: {x: 0, y: 100, z: 3}
+--- !u!136 &6454865357641753921
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518548502185783518}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -152,19 +165,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.5600002, y: 2.5599997, z: 0.20000003}
+  serializedVersion: 2
+  m_Radius: 0.55
+  m_Height: 2.56
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3849261778129064384
+--- !u!114 &7438191411342312722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872989706379875677}
+  m_GameObject: {fileID: 7518548502185783518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7ca2e9583e03344b97089549b0c980, type: 3}
+  m_Script: {fileID: 11500000, guid: 99e239d6bd6ef5142bbfe3c2515ecd63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 100, z: 3}
+  damageAmount: 0
+  manaToRestore: 5
+  destroyOnHit: 1
+  hitEffect: {fileID: 0}
+  manaEffect: {fileID: 0}
