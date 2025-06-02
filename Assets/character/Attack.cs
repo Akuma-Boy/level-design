@@ -14,16 +14,17 @@ public class Attack : MonoBehaviour
     [SerializeField] private float pistolsProjectileSpeed = 30f;
     [SerializeField] private float normalAttackCooldown = 0.5f;
     [SerializeField] private float pistolsAttackCooldown = 0.2f;
-    [SerializeField] private int pistolManaCost = 10; // Custo de mana por tiro de pistola
+    [SerializeField] private int pistolManaCost = 10;
 
     [Header("Eventos")]
-    public UnityEvent OnPistolShot; // Disparado quando atira com pistola
-    public UnityEvent OnNotEnoughMana; // Disparado quando não tem mana suficiente
+    public UnityEvent OnPistolShot;
+    public UnityEvent OnNotEnoughMana;
 
     [Tooltip("Offset de spawn do projétil em relação à câmera (X = lateral, Y = altura, Z = frente).")]
     [SerializeField] private Vector3 projectileSpawnOffset = new Vector3(0f, 0f, 1f);
 
     [SerializeField] private float comboWindow = 0.3f;
+    [SerializeField] private BottleController bottleController;
 
     private float nextAttackTime = 0f;
     private bool pistols = false;
@@ -31,6 +32,8 @@ public class Attack : MonoBehaviour
     private float lastPistolAttackTime;
     private float currentAttackCooldown;
     private float currentProjectileSpeed;
+
+    public bool podeAtacar = true; // Controle externo de ataque
 
     void Start()
     {
@@ -45,15 +48,28 @@ public class Attack : MonoBehaviour
 
         currentAttackCooldown = normalAttackCooldown;
         currentProjectileSpeed = normalProjectileSpeed;
+
+        if (bottleController == null)
+            bottleController = GetComponent<BottleController>();
     }
 
     void Update()
     {
-        // Toggle das pistolas com a tecla 2
+        // Troca para pistolas
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             TogglePistols();
+            return;
         }
+
+        // Bloqueia ataque se garrafa equipada ou se bloqueio externo ativo
+        if (bottleController != null)
+        {
+            // Impede ataque se a garrafa está sendo usada OU acabou de ser usada neste frame
+            if (bottleController.garrafaEquipando || bottleController.GarrafaAcabouDeSerUsada())
+                return;
+        }
+
 
         // Ataque com botão esquerdo do mouse
         if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
@@ -83,12 +99,16 @@ public class Attack : MonoBehaviour
             }
         }
 
-
         ResetComboIfTimeout();
     }
 
     private void TogglePistols()
     {
+        if (bottleController != null && bottleController.garrafaEquipando)
+        {
+            bottleController.ForcarDesativarGarrafa();
+        }
+
         pistols = !pistols;
         animator.SetBool("Pistols", pistols);
 
@@ -164,7 +184,6 @@ public class Attack : MonoBehaviour
         }
     }
 
-    // Método para ajustar o custo de mana dinamicamente
     public void SetPistolManaCost(int newCost)
     {
         pistolManaCost = Mathf.Max(0, newCost);
@@ -180,5 +199,13 @@ public class Attack : MonoBehaviour
                 Debug.Log("- " + param.name + " (" + param.type + ")");
             }
         }
+    }
+
+    public void ForcarDesativarPistolas()
+    {
+        pistols = false;
+        animator.SetBool("Pistols", false);
+        currentAttackCooldown = normalAttackCooldown;
+        currentProjectileSpeed = normalProjectileSpeed;
     }
 }
