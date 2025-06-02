@@ -15,9 +15,11 @@ public class ProjectileEnemy : MonoBehaviour
     private Transform player;
     private float nextFireTime = 0f;
     private static readonly int Attack = Animator.StringToHash("attack");
+    private bool hasLineOfSight = false;
 
     void Start()
     {
+        // Busca imediata do player
         TryAssignPlayer();
 
         if (enemyAnimator == null)
@@ -26,15 +28,18 @@ public class ProjectileEnemy : MonoBehaviour
 
     void Update()
     {
-        // Se perdeu referência ao jogador, tenta achar de novo
-        if (player == null)
+        // Atualização mais robusta da referência ao player
+        if (player == null || !player.gameObject.activeInHierarchy)
         {
             TryAssignPlayer();
-            return;
+            if (player == null) return;
         }
 
+        // Verificação de linha de visada
+        CheckLineOfSight();
+
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= detectionRange)
+        if (distanceToPlayer <= detectionRange && hasLineOfSight)
         {
             AimAtPlayer();
 
@@ -49,9 +54,26 @@ public class ProjectileEnemy : MonoBehaviour
     void TryAssignPlayer()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+        if (playerObj != null && playerObj.activeInHierarchy)
         {
             player = playerObj.transform;
+        }
+    }
+
+    void CheckLineOfSight()
+    {
+        if (player == null) return;
+
+        RaycastHit hit;
+        Vector3 directionToPlayer = (player.position - transform.position).normalized;
+
+        if (Physics.Raycast(transform.position, directionToPlayer, out hit, detectionRange))
+        {
+            hasLineOfSight = hit.transform.CompareTag("Player");
+        }
+        else
+        {
+            hasLineOfSight = false;
         }
     }
 
@@ -69,23 +91,30 @@ public class ProjectileEnemy : MonoBehaviour
 
     void Shoot()
     {
-        if (projectilePrefab == null || firePoint == null)
+        if (projectilePrefab == null || firePoint == null || player == null)
         {
-            Debug.LogWarning("Prefab ou firePoint não atribuídos!", this);
+            Debug.LogWarning("Componentes essenciais não atribuídos!", this);
             return;
         }
 
-        // Dispara a animação de ataque
-        if (enemyAnimator != null)
+        // Dispara animação
+        if (enemyAnimator != null && enemyAnimator.isActiveAndEnabled)
+        {
             enemyAnimator.SetTrigger(Attack);
+        }
+        else
+        {
+            Debug.LogWarning("Animator não disponível!", this);
+        }
 
+        // Instancia projétil
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
-        if (rb != null && player != null)
+        if (rb != null)
         {
             Vector3 direction = (player.position - firePoint.position).normalized;
-            rb.linearVelocity = direction * projectileSpeed;
+            rb.velocity = direction * projectileSpeed;
 
             Collider projectileCollider = projectile.GetComponent<Collider>();
             Collider enemyCollider = GetComponent<Collider>();
@@ -100,5 +129,12 @@ public class ProjectileEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
+
+        // Mostra linha de visada
+        if (player != null)
+        {
+            Gizmos.color = hasLineOfSight ? Color.green : Color.yellow;
+            Gizmos.DrawLine(transform.position, player.position);
+        }
     }
 }

@@ -56,8 +56,7 @@ MonoBehaviour:
   projectileSpeed: 10
   fireRate: 1
   detectionRange: 10
-  player: {fileID: 0}
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 168944000555326226}
 --- !u!114 &9076029220417852601
 MonoBehaviour:
   m_ObjectHideFlags: 0
