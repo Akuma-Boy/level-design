@@ -1688,7 +1688,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 315193414}
   spawnRadius: 1.63
   spawnInterval: 7
-  maxActiveSpawns: 20
+  maxActiveSpawns: 4
 --- !u!1001 &317875476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7873,7 +7873,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1165539307}
   spawnRadius: 1.63
   spawnInterval: 7
-  maxActiveSpawns: 20
+  maxActiveSpawns: 5
 --- !u!1001 &1178012019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8112,7 +8112,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1222084979}
   spawnRadius: 1.92
   spawnInterval: 5
-  maxActiveSpawns: 20
+  maxActiveSpawns: 2
 --- !u!1001 &1224236473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9832,7 +9832,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1419602746}
   spawnRadius: 1.77
   spawnInterval: 9
-  maxActiveSpawns: 20
+  maxActiveSpawns: 5
 --- !u!1001 &1424803385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12086,7 +12086,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1711758601}
   spawnRadius: 1.77
   spawnInterval: 9
-  maxActiveSpawns: 20
+  maxActiveSpawns: 4
 --- !u!1001 &1719752262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14495,7 +14495,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2017118762}
   spawnRadius: 1.92
   spawnInterval: 5
-  maxActiveSpawns: 20
+  maxActiveSpawns: 5
 --- !u!1001 &2017781244
 PrefabInstance:
   m_ObjectHideFlags: 0
