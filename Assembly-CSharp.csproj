@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\character\ManaSystem.cs" />
+    <Compile Include="Assets\character\ItemSpawner.cs" />
     <Compile Include="Assets\enemys\PrefabSpawner.cs" />
     <Compile Include="Assets\character\PlayerHealth.cs" />
     <Compile Include="Assets\character\Projectile.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\character\ProjectileEffect.cs" />
     <Compile Include="Assets\character\GarrafaUIController.cs" />
     <Compile Include="Assets\enemys\ProjectileEnemy.cs" />
+    <Compile Include="Assets\enemys\EnemyBottleDrop.cs" />
     <Compile Include="Assets\character\CameraShake.cs" />
     <Compile Include="Assets\enemys\EnemyMovement.cs" />
     <Compile Include="Assets\character\BottleController.cs" />

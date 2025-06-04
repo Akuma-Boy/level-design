@@ -1,4 +1,5 @@
 using UnityEngine;
+using System; // Adicionado para usar Action
 
 public class EnemyHP : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] private int currentHealth;
     [SerializeField] private GameObject deathEffect;
     [SerializeField] private AudioClip deathSound;
+
+    // Evento adicionado
+    public event Action OnDeath;
 
     private void Start()
     {
@@ -15,9 +19,9 @@ public class EnemyHP : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"Inimigo atingido! Vida restante: {currentHealth}"); // Log para debug
-        
-        if(currentHealth <= 0)
+        Debug.Log($"Inimigo atingido! Vida restante: {currentHealth}");
+
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -25,18 +29,20 @@ public class EnemyHP : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Inimigo derrotado!"); // Log para debug
-        
-        if(deathEffect != null)
+        Debug.Log("Inimigo derrotado!");
+
+        // Dispara o evento antes de destruir o objeto
+        OnDeath?.Invoke();
+
+        if (deathEffect != null)
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-        
-        if(deathSound != null)
+
+        if (deathSound != null)
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
-        
+
         Destroy(gameObject);
     }
 
-    // Método para debug - mostra a vida atual no console
     public void DebugHealth()
     {
         Debug.Log($"Vida atual: {currentHealth}/{maxHealth}");

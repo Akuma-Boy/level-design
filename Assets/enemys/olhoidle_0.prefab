@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 250207698223517112}
   - component: {fileID: 168944000555326226}
   - component: {fileID: 1996146151850924902}
+  - component: {fileID: 277603101914740467}
   m_Layer: 0
   m_Name: olhoidle_0
   m_TagString: Enemy
@@ -55,8 +56,16 @@ MonoBehaviour:
   firePoint: {fileID: 1088223485219720728}
   projectileSpeed: 10
   fireRate: 1
-  detectionRange: 10
+  detectionRange: 50
+  attackAngleThreshold: 45
   enemyAnimator: {fileID: 168944000555326226}
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  debugStatus: Iniciando...
+  lastDistanceToPlayer: 0
+  lastAngleToPlayer: 0
+  debugHasLineOfSight: 0
 --- !u!114 &9076029220417852601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,3 +250,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &277603101914740467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796518651453462702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b859a0dd35fc664c914e45d626715d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healingParticles: {fileID: 5555934532562248226, guid: 285d614bc12ac2948ad7b2473c9126b6, type: 3}
+  particleSpeed: 20
+  particleLifetime: 2

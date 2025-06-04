@@ -9,7 +9,7 @@ public class BottleController : MonoBehaviour
 
     [Header("Configurações")]
     public int healAmount = 30;
-    public int GolesRestantes { get; private set; } = 4;
+    public int GolesRestantes { get; set; } = 4;
     private const int maxGoles = 4;
 
     [Header("Estado Interno")]
@@ -86,7 +86,7 @@ public class BottleController : MonoBehaviour
         AtualizarEstadoGarrafa();
     }
 
-    private void AtualizarEstadoGarrafa()
+    public void AtualizarEstadoGarrafa()
     {
         if (!garrafaEquipando) return;
 

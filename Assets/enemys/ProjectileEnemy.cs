@@ -7,85 +7,131 @@ public class ProjectileEnemy : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
     public float fireRate = 1f;
-    public float detectionRange = 10f;
+    public float detectionRange = 15f;
+    public float attackAngleThreshold = 45f;
 
     [Header("Referências")]
     public Animator enemyAnimator;
+    public LayerMask obstacleLayers = ~0;
+
+    // Debug
+    [Header("Debug")]
+    [SerializeField] private string debugStatus = "Iniciando...";
+    [SerializeField] private float lastDistanceToPlayer;
+    [SerializeField] private float lastAngleToPlayer;
+    [SerializeField] private bool debugHasLineOfSight;
 
     private Transform player;
     private float nextFireTime = 0f;
     private static readonly int Attack = Animator.StringToHash("attack");
-    private bool hasLineOfSight = false;
+
+    void Awake()
+    {
+        if (enemyAnimator == null)
+            enemyAnimator = GetComponentInChildren<Animator>(true);
+    }
 
     void Start()
     {
-        // Busca imediata do player
-        TryAssignPlayer();
-
-        if (enemyAnimator == null)
-            enemyAnimator = GetComponent<Animator>();
+        FindPlayer();
+        if (firePoint == null) firePoint = transform;
     }
 
     void Update()
     {
-        // Atualização mais robusta da referência ao player
-        if (player == null || !player.gameObject.activeInHierarchy)
+        if (player == null)
         {
-            TryAssignPlayer();
-            if (player == null) return;
+            FindPlayer();
+            debugStatus = "Procurando player...";
+            return;
         }
 
-        // Verificação de linha de visada
-        CheckLineOfSight();
+        UpdatePlayerDetection();
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= detectionRange && hasLineOfSight)
+        if (CanAttack())
         {
+            debugStatus = "Atacando!";
             AimAtPlayer();
-
-            if (Time.time >= nextFireTime)
-            {
-                Shoot();
-                nextFireTime = Time.time + 1f / fireRate;
-            }
-        }
-    }
-
-    void TryAssignPlayer()
-    {
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null && playerObj.activeInHierarchy)
-        {
-            player = playerObj.transform;
-        }
-    }
-
-    void CheckLineOfSight()
-    {
-        if (player == null) return;
-
-        RaycastHit hit;
-        Vector3 directionToPlayer = (player.position - transform.position).normalized;
-
-        if (Physics.Raycast(transform.position, directionToPlayer, out hit, detectionRange))
-        {
-            hasLineOfSight = hit.transform.CompareTag("Player");
+            TryShoot();
         }
         else
         {
-            hasLineOfSight = false;
+            debugStatus = $"Player detectado mas não pode atacar\nDistância: {lastDistanceToPlayer:F1}\nÂngulo: {lastAngleToPlayer:F1}°\nLinha de visão: {debugHasLineOfSight}";
         }
+    }
+
+    void FindPlayer()
+    {
+        var playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+            Debug.Log($"Player encontrado: {player.name}", this);
+        }
+        else
+        {
+            Debug.LogWarning("Player não encontrado!", this);
+            Invoke(nameof(FindPlayer), 0.5f);
+        }
+    }
+
+    void UpdatePlayerDetection()
+    {
+        lastDistanceToPlayer = Vector3.Distance(transform.position, player.position);
+        debugHasLineOfSight = CheckLineOfSight();
+
+        Debug.DrawLine(firePoint.position, player.position,
+                      debugHasLineOfSight ? Color.green : Color.red, 0.1f);
+    }
+
+    bool CheckLineOfSight()
+    {
+        Vector3 direction = player.position - firePoint.position;
+        RaycastHit hit;
+
+        if (Physics.Raycast(firePoint.position, direction, out hit, detectionRange, obstacleLayers))
+        {
+            bool canSee = hit.transform.CompareTag("Player");
+            if (!canSee) Debug.Log($"Obstáculo detectado: {hit.transform.name}", this);
+            return canSee;
+        }
+        return false;
+    }
+
+    bool CanAttack()
+    {
+        if (player == null) return false;
+
+        Vector3 direction = (player.position - transform.position).normalized;
+        lastAngleToPlayer = Vector3.Angle(transform.forward, direction);
+
+        bool inRange = lastDistanceToPlayer <= detectionRange;
+        bool goodAngle = lastAngleToPlayer <= attackAngleThreshold;
+
+        return inRange && goodAngle && debugHasLineOfSight;
     }
 
     void AimAtPlayer()
     {
-        if (player == null) return;
-
         Vector3 direction = (player.position - transform.position).normalized;
+        direction.y = 0;
+
         if (direction != Vector3.zero)
         {
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Euler(0, lookRotation.eulerAngles.y, 0);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                Quaternion.LookRotation(direction),
+                Time.deltaTime * 10f
+            );
+        }
+    }
+
+    void TryShoot()
+    {
+        if (Time.time >= nextFireTime)
+        {
+            Shoot();
+            nextFireTime = Time.time + 1f / fireRate;
         }
     }
 
@@ -93,48 +139,71 @@ public class ProjectileEnemy : MonoBehaviour
     {
         if (projectilePrefab == null || firePoint == null || player == null)
         {
-            Debug.LogWarning("Componentes essenciais não atribuídos!", this);
+            Debug.LogWarning("Componentes faltando para atirar", this);
             return;
         }
 
-        // Dispara animação
+        // Animação
         if (enemyAnimator != null && enemyAnimator.isActiveAndEnabled)
         {
             enemyAnimator.SetTrigger(Attack);
+            Debug.Log("Animação de ataque disparada", this);
         }
         else
         {
             Debug.LogWarning("Animator não disponível!", this);
         }
 
-        // Instancia projétil
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        // Projétil
+        Vector3 shootDirection = (player.position - firePoint.position).normalized;
+        GameObject projectile = Instantiate(
+            projectilePrefab,
+            firePoint.position,
+            Quaternion.LookRotation(shootDirection)
+        );
 
-        if (rb != null)
+        // Física
+        if (projectile.TryGetComponent<Rigidbody>(out var rb))
         {
-            Vector3 direction = (player.position - firePoint.position).normalized;
-            rb.velocity = direction * projectileSpeed;
+            rb.velocity = shootDirection * projectileSpeed;
 
-            Collider projectileCollider = projectile.GetComponent<Collider>();
-            Collider enemyCollider = GetComponent<Collider>();
-            if (projectileCollider != null && enemyCollider != null)
+            if (TryGetComponent<Collider>(out var enemyCollider))
             {
-                Physics.IgnoreCollision(projectileCollider, enemyCollider, true);
+                foreach (var col in projectile.GetComponentsInChildren<Collider>())
+                {
+                    Physics.IgnoreCollision(enemyCollider, col);
+                }
             }
+        }
+    }
+
+    void OnGUI()
+    {
+        if (Debug.isDebugBuild)
+        {
+            GUI.color = Color.red;
+            GUI.Label(new Rect(10, 100, 500, 200), $"STATUS INIMIGO: {debugStatus}");
         }
     }
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        // Alcance
+        Gizmos.color = new Color(1, 0, 0, 0.2f);
+        Gizmos.DrawSphere(transform.position, detectionRange);
 
-        // Mostra linha de visada
+        // Direção de ataque
         if (player != null)
         {
-            Gizmos.color = hasLineOfSight ? Color.green : Color.yellow;
-            Gizmos.DrawLine(transform.position, player.position);
+            Gizmos.color = debugHasLineOfSight ? Color.green : Color.yellow;
+            Gizmos.DrawLine(firePoint.position, player.position);
+
+            // Ângulo de ataque
+            Gizmos.color = Color.blue;
+            Vector3 leftBound = Quaternion.Euler(0, -attackAngleThreshold, 0) * transform.forward * detectionRange;
+            Vector3 rightBound = Quaternion.Euler(0, attackAngleThreshold, 0) * transform.forward * detectionRange;
+            Gizmos.DrawLine(transform.position, transform.position + leftBound);
+            Gizmos.DrawLine(transform.position, transform.position + rightBound);
         }
     }
 }

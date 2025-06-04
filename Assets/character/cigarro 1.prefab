@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7438191411342312722}
   m_Layer: 0
   m_Name: cigarro 1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaToRestore: 15
   destroyOnHit: 1
-  manaEffect: {fileID: 0}
+  manaEffect: {fileID: 7904382841925786450, guid: ffa42425ed6dc1c41aeba5f25f380809, type: 3}
 --- !u!114 &3153901768191495115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,4 +186,4 @@ MonoBehaviour:
   manaToRestore: 5
   destroyOnHit: 1
   hitEffect: {fileID: 0}
-  manaEffect: {fileID: 0}
+  manaEffect: {fileID: 7904382841925786450, guid: ffa42425ed6dc1c41aeba5f25f380809, type: 3}
