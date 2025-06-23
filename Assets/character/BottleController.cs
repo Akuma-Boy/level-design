@@ -88,6 +88,11 @@ public class BottleController : MonoBehaviour
 
     public void AtualizarEstadoGarrafa()
     {
+        // Atualiza os estados primeiro
+        garrafaCheia = GolesRestantes > 0;
+        garrafaVazia = !garrafaCheia;
+
+        // Depois atualiza o animator
         if (!garrafaEquipando) return;
 
         animator.SetBool("GarrafaCheia", garrafaCheia);

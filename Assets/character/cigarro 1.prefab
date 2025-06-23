@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69223031154089244ae0566f0fcafcc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaToRestore: 15
+  manaToRestore: 30
   destroyOnHit: 1
   manaEffect: {fileID: 7904382841925786450, guid: ffa42425ed6dc1c41aeba5f25f380809, type: 3}
 --- !u!114 &3153901768191495115

@@ -165,7 +165,7 @@ public class ProjectileEnemy : MonoBehaviour
         // Física
         if (projectile.TryGetComponent<Rigidbody>(out var rb))
         {
-            rb.velocity = shootDirection * projectileSpeed;
+            rb.linearVelocity = shootDirection * projectileSpeed;
 
             if (TryGetComponent<Collider>(out var enemyCollider))
             {
