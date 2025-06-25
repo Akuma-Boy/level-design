@@ -66,8 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\character\ManaSystem.cs" />
-    <Compile Include="Assets\Boss script\LightningDamage.cs" />
     <Compile Include="Assets\StartGameMenu.cs" />
+    <Compile Include="Assets\Boss script\LightningDamage.cs" />
     <Compile Include="Assets\character\ItemSpawner.cs" />
     <Compile Include="Assets\enemys\PrefabSpawner.cs" />
     <Compile Include="Assets\character\PlayerHealth.cs" />
@@ -92,6 +92,7 @@
     <Compile Include="Assets\enemys\Lookatu.cs" />
     <Compile Include="Assets\character\Vendedor.cs" />
     <Compile Include="Assets\enemys\enemyhp.cs" />
+    <Compile Include="Assets\Scenes\MenuController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

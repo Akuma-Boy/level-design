@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI; // Para efeitos de UI
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Adicionado para gerenciamento de cenas
 
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("Configura��es de Vida")]
+    [Header("Configurações de Vida")]
     public int maxHealth = 100;
     public int currentHealth;
     public bool isInvincible = false;
@@ -16,10 +17,10 @@ public class PlayerHealth : MonoBehaviour
     public UnityEvent OnHealthChanged;
 
     [Header("Feedback de Dano")]
-    public Image damageScreenEffect; // Imagem de overlay para efeito de dano
-    public Color damageColor = new Color(1f, 0f, 0f, 0.5f); // Cor do efeito (vermelho semi-transparente)
-    public float flashDuration = 0.2f; // Dura��o do efeito piscante
-    public CameraShake cameraShakeEffect; // Refer�ncia para efeito de tremer c�mera
+    public Image damageScreenEffect;
+    public Color damageColor = new Color(1f, 0f, 0f, 0.5f);
+    public float flashDuration = 0.2f;
+    public CameraShake cameraShakeEffect;
     public float shakeIntensity = 0.5f;
     public float shakeDuration = 0.3f;
 
@@ -28,23 +29,29 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip deathSound;
     [Range(0, 1)] public float volume = 0.7f;
 
+    [Header("Configurações de Morte")]
+    public bool resetPositionOnDeath = true;
+    public Transform respawnPoint; // Ponto de respawn se resetPositionOnDeath for true
+    public bool reloadSceneOnDeath = false;
+    public float delayBeforeReset = 2f; // Tempo antes de reiniciar
+
     private float invincibilityTimer = 0f;
     private Color originalEffectColor;
     private AudioSource audioSource;
+    private Vector3 initialPosition; // Posição inicial do jogador
 
     void Start()
     {
         currentHealth = maxHealth;
+        initialPosition = transform.position; // Guarda a posição inicial
         OnHealthChanged.Invoke();
 
-        // Configura efeitos visuais
         if (damageScreenEffect != null)
         {
             originalEffectColor = damageScreenEffect.color;
             damageScreenEffect.color = Color.clear;
         }
 
-        // Configura �udio
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -63,7 +70,6 @@ public class PlayerHealth : MonoBehaviour
                 isInvincible = false;
                 invincibilityTimer = 0f;
 
-                // Resetar efeito visual se necess�rio
                 if (damageScreenEffect != null)
                 {
                     damageScreenEffect.color = Color.clear;
@@ -79,8 +85,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damageAmount;
         OnHealthChanged.Invoke();
         OnDamageTaken.Invoke();
-
-        // Efeitos de feedback
         PlayDamageEffects();
 
         if (currentHealth <= 0)
@@ -95,20 +99,17 @@ public class PlayerHealth : MonoBehaviour
 
     private void PlayDamageEffects()
     {
-        // Efeito visual piscante
         if (damageScreenEffect != null)
         {
             damageScreenEffect.color = damageColor;
             Invoke("ResetDamageEffect", flashDuration);
         }
 
-        // Tremer c�mera
         if (cameraShakeEffect != null)
         {
             cameraShakeEffect.ShakeCamera(shakeIntensity, shakeDuration);
         }
 
-        // Som de dano
         if (damageSound != null)
         {
             audioSource.PlayOneShot(damageSound, volume);
@@ -134,7 +135,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = 0;
         OnDeath.Invoke();
 
-        // Efeitos de morte
         if (deathSound != null)
         {
             audioSource.PlayOneShot(deathSound, volume);
@@ -146,7 +146,40 @@ public class PlayerHealth : MonoBehaviour
         }
 
         Debug.Log("Player morreu!");
-        // Adicione aqui outras l�gicas de game over
+
+        // Chama o respawn após o delay
+        Invoke("Respawn", delayBeforeReset);
+    }
+
+    private void Respawn()
+    {
+        if (reloadSceneOnDeath)
+        {
+            // Recarrega a cena atual
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (resetPositionOnDeath)
+        {
+            // Reseta a posição do jogador
+            if (respawnPoint != null)
+            {
+                transform.position = respawnPoint.position;
+            }
+            else
+            {
+                transform.position = initialPosition;
+            }
+
+            // Reseta a vida
+            currentHealth = maxHealth;
+            OnHealthChanged.Invoke();
+
+            // Reseta efeitos visuais
+            if (damageScreenEffect != null)
+            {
+                damageScreenEffect.color = Color.clear;
+            }
+        }
     }
 
     public float GetHealthPercentage()
@@ -154,5 +187,3 @@ public class PlayerHealth : MonoBehaviour
         return (float)currentHealth / maxHealth;
     }
 }
-
-

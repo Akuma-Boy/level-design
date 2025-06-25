@@ -3236,12 +3236,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rotationSpeed: 5
-  orbitDistance: 5
-  orbitSpeed: 2
+  orbitDistance: 3.99
+  orbitSpeed: 5.59
   floatHeight: 1
   heightAdjustSpeed: 2
-  aggroRadius: 8.1
-  deaggroRadius: 5.52
+  aggroRadius: 13.76
+  deaggroRadius: 12.44
   useGravity: 0
   groundCheckDistance: 1
   groundLayer:
@@ -3283,13 +3283,13 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2576073445967537643, guid: 2fc87060029b53e47b6c4980f60ed6c7, type: 3}
   firePoint: {fileID: 279749696}
   projectileSpeed: 30
-  detectionRange: 15
+  detectionRange: 17.7
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  initialBurstRate: 0.2
-  normalFireRate: 1
-  burstDuration: 3
+  initialBurstRate: 5
+  normalFireRate: 3
+  burstDuration: 20
   attackAngleThreshold: 45
   attackTriggerName: Attack
   showDebugInfo: 1
@@ -3533,7 +3533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0d192bf582bcba4cb8b2e12678adb5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0d192bf582bcba4cb8b2e12678adb5d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11343,6 +11343,10 @@ MonoBehaviour:
   damageSound: {fileID: 0}
   deathSound: {fileID: 0}
   volume: 0.7
+  resetPositionOnDeath: 1
+  respawnPoint: {fileID: 861633722}
+  reloadSceneOnDeath: 1
+  delayBeforeReset: 1
 --- !u!114 &861633720
 MonoBehaviour:
   m_ObjectHideFlags: 0
