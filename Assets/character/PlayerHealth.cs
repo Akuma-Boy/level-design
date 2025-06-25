@@ -4,7 +4,7 @@ using UnityEngine.UI; // Para efeitos de UI
 
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("Configurações de Vida")]
+    [Header("Configuraï¿½ï¿½es de Vida")]
     public int maxHealth = 100;
     public int currentHealth;
     public bool isInvincible = false;
@@ -18,8 +18,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("Feedback de Dano")]
     public Image damageScreenEffect; // Imagem de overlay para efeito de dano
     public Color damageColor = new Color(1f, 0f, 0f, 0.5f); // Cor do efeito (vermelho semi-transparente)
-    public float flashDuration = 0.2f; // Duração do efeito piscante
-    public CameraShake cameraShakeEffect; // Referência para efeito de tremer câmera
+    public float flashDuration = 0.2f; // Duraï¿½ï¿½o do efeito piscante
+    public CameraShake cameraShakeEffect; // Referï¿½ncia para efeito de tremer cï¿½mera
     public float shakeIntensity = 0.5f;
     public float shakeDuration = 0.3f;
 
@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
             damageScreenEffect.color = Color.clear;
         }
 
-        // Configura áudio
+        // Configura ï¿½udio
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
                 isInvincible = false;
                 invincibilityTimer = 0f;
 
-                // Resetar efeito visual se necessário
+                // Resetar efeito visual se necessï¿½rio
                 if (damageScreenEffect != null)
                 {
                     damageScreenEffect.color = Color.clear;
@@ -102,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
             Invoke("ResetDamageEffect", flashDuration);
         }
 
-        // Tremer câmera
+        // Tremer cï¿½mera
         if (cameraShakeEffect != null)
         {
             cameraShakeEffect.ShakeCamera(shakeIntensity, shakeDuration);
@@ -146,7 +146,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         Debug.Log("Player morreu!");
-        // Adicione aqui outras lógicas de game over
+        // Adicione aqui outras lï¿½gicas de game over
     }
 
     public float GetHealthPercentage()

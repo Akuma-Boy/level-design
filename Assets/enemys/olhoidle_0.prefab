@@ -124,7 +124,7 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!212 &6864201148056498223
 SpriteRenderer:
   m_ObjectHideFlags: 0
