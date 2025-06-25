@@ -67,6 +67,7 @@
     <Compile Include="Assets\character\ItemSpawner.cs" />
     <Compile Include="Assets\enemys\PrefabSpawner.cs" />
     <Compile Include="Assets\character\PlayerHealth.cs" />
+    <Compile Include="Assets\enemys\InteracaoDialogo.cs" />
     <Compile Include="Assets\character\Projectile.cs" />
     <Compile Include="Assets\character\FixCanvaPivot.cs" />
     <Compile Include="Assets\character\RotateOnject.cs" />
@@ -76,12 +77,14 @@
     <Compile Include="Assets\character\Attack.cs" />
     <Compile Include="Assets\character\ManaRestoreOnHit.cs" />
     <Compile Include="Assets\character\movimentoplayer.cs" />
+    <Compile Include="Assets\Boss script\Flutuante.cs" />
     <Compile Include="Assets\enemys\ProjectileDamageEnemy.cs" />
     <Compile Include="Assets\character\ProjectileEffect.cs" />
     <Compile Include="Assets\character\GarrafaUIController.cs" />
     <Compile Include="Assets\enemys\ProjectileEnemy.cs" />
     <Compile Include="Assets\enemys\EnemyBottleDrop.cs" />
     <Compile Include="Assets\character\CameraShake.cs" />
+    <Compile Include="Assets\Boss script\VerificadorPrefab.cs" />
     <Compile Include="Assets\enemys\EnemyMovement.cs" />
     <Compile Include="Assets\MostrarCursos.cs" />
     <Compile Include="Assets\character\BottleController.cs" />

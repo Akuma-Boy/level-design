@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|c:\\users\\matutino\\documents\\github\\level-design\\assets\\boss script\\verificadorprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\boss script\\verificadorprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|c:\\users\\matutino\\documents\\github\\level-design\\assets\\scenes\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\enemys\\interacaodialogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\interacaodialogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\boss script\\flutuante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\boss script\\flutuante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\character\\bottlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\bottlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|c:\\users\\matutino\\documents\\github\\level-design\\assets\\enemys\\enemybottledrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\assets\\enemys\\enemybottledrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF84079E-E7A5-B4AB-3663-BEE2F6A5F3E3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\enemybottledrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "BottleController.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\BottleController.cs",
               "RelativeDocumentMoniker": "Assets\\character\\BottleController.cs",
@@ -63,12 +79,74 @@
               "ViewState": "AQIAAFAAAAAAAAAAAAAwwGMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T12:45:22.636Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VerificadorPrefab.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\Boss script\\VerificadorPrefab.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss script\\VerificadorPrefab.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\Boss script\\VerificadorPrefab.cs",
+              "RelativeToolTip": "Assets\\Boss script\\VerificadorPrefab.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T11:54:29.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\Scenes\\MenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\MenuController.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\Scenes\\MenuController.cs",
+              "RelativeToolTip": "Assets\\Scenes\\MenuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T11:43:51.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Mask.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T12:06:34.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InteracaoDialogo.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\InteracaoDialogo.cs",
+              "RelativeDocumentMoniker": "Assets\\enemys\\InteracaoDialogo.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\InteracaoDialogo.cs",
+              "RelativeToolTip": "Assets\\enemys\\InteracaoDialogo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T11:36:38.624Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Flutuante.cs",
+              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\Boss script\\Flutuante.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss script\\Flutuante.cs",
+              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\Boss script\\Flutuante.cs",
+              "RelativeToolTip": "Assets\\Boss script\\Flutuante.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T11:05:59.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "enemyhp.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\enemyhp.cs",
               "RelativeDocumentMoniker": "Assets\\enemys\\enemyhp.cs",
@@ -80,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EnemyBottleDrop.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\EnemyBottleDrop.cs",
               "RelativeDocumentMoniker": "Assets\\enemys\\EnemyBottleDrop.cs",
@@ -88,12 +166,11 @@
               "RelativeToolTip": "Assets\\enemys\\EnemyBottleDrop.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAmwEQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T12:48:12.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T12:48:12.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "GarrafaUIController.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\GarrafaUIController.cs",
               "RelativeDocumentMoniker": "Assets\\character\\GarrafaUIController.cs",
@@ -101,24 +178,11 @@
               "RelativeToolTip": "Assets\\character\\GarrafaUIController.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAIwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T12:46:04.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T12:46:04.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Mask.cs",
-              "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
-              "ToolTip": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Mask.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T12:06:34.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\character\\PlayerHealth.cs",
@@ -130,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "ItemSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\character\\ItemSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\character\\ItemSpawner.cs",
@@ -142,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "EnemyMovement.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\EnemyMovement.cs",
               "RelativeDocumentMoniker": "Assets\\enemys\\EnemyMovement.cs",
@@ -154,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "ProjectileEnemy.cs",
               "DocumentMoniker": "C:\\Users\\Matutino\\Documents\\GitHub\\Level-Design\\Assets\\enemys\\ProjectileEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\enemys\\ProjectileEnemy.cs",
